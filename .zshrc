@@ -20,12 +20,16 @@ alias update='sudo apt update'
 alias upgrade='sudo apt upgrade'
 alias ll='ls -al'
 alias -s txt=nano
-alias torchwood='ssh maxis@torchwood.ml'
+alias torchwood='ssh root@torchwood.by'
 alias keyget='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys'
-alias maybe='maybe'
 ###########PS#############
 #PS1='[ %~ ] # '
 
 PS1="----->"
 
-##########PS###########
+##########scripts###########
+wifi-fix(){
+sudo modprobe -r b43 ssb wl brcmfmac brcmsmac bcma
+sudo modprobe wl}
+
+
